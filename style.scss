@@ -8,7 +8,7 @@
     -webkit-border-radius: $b;
 }
 
-@mixin boder($a) {
+@mixin border($a) {
     border: $a solid $border;
 }
 
@@ -49,19 +49,72 @@ body {
 }
 
 .square {
+    @include border(.09rem);
     margin-left: .2rem;
     width: 2.4rem;
     height: 3rem;
     background: #FFF;
-    &:before{
-    	content: '';
-    	position: absolute; 
-    	height: 2rem;
-    	width:2.1rem;
-    	background: pink;
-    	margin:{
-    	top:.2rem;
-    	left:.1rem;
-    	}
+    &:before {
+        content: '';
+        position: absolute;
+        height: 2rem;
+        width: 1.99rem;
+        background: pink;
+        margin: {
+            top: .2rem;
+            left: .04rem;
+        }
+    }
+}
+
+.plant {
+    @include border(0.09rem);
+    background: #FFF;
+    width: 4rem;
+    height: 2rem;
+    margin: {
+        top: 17rem;
+        left: -4rem;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        background: #FFF;
+        width: 3rem;
+        height: 3.5rem;
+        @include border(0.09rem);
+        margin: {
+            top: 2.1rem;
+            left: .47rem;
+        }
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+.bush {
+    height: 3rem;
+    width: .6rem;
+    background: #77B28C;
+    margin: {
+        top: -3.2rem;
+        left: 1rem;
+    }
+    border-radius:100%;
+    @include border(0.09rem);
+    transform:rotate(-10deg);
+    &:before, {
+        content: '';
+        position: absolute;
+        height: 3.8rem;
+        width: .6rem;
+        background: #77B28C;
+        @include border(0.09rem);
+        @include radius(100%);
+        margin:{
+        	left:.8rem;
+        	top:-.78rem;
+        }
+        transform: rotate(10deg);
+
     }
 }
