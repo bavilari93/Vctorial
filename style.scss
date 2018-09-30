@@ -40,6 +40,7 @@ body {
 }
 
 .polaroids {
+	margin-left: 3rem;
     display: flex;
     /* this one distributes evenly*/
     flex: 1 1 auto;
@@ -132,7 +133,7 @@ body {
 	&:before,&:after{
 		content:'';
 		position:absolute; 
-		background: $shelf; 
+		background-color: $shelf; 
 		@include border(0.09rem);
 	}
 	&:before{
@@ -154,5 +155,39 @@ body {
 			left:7.4rem;
 		}
 
+	}
+}
+.drawer{
+z-index:1;
+	width:7.2rem;
+	height:.1rem;
+	background: #000;	
+	position:absolute;
+	margin:{
+	left:7.4rem ;
+	top: 5rem;
+	}
+}
+.knob{
+z-index:1;
+position:absolute;
+	background: Silver; 
+	height: .4rem;
+	width: .4rem;
+	@include radius(100%);
+	@include border(.09rem);
+	margin:{
+		left:10.8rem;
+		top:2.5rem;
+	}
+	&:before{
+	content:'';
+		position:absolute;
+	background: Silver; 
+	height: .4rem;
+	width: .4rem;
+	@include radius(100%);
+	@include border(.09rem);
+	margin-top:4rem;
 	}
 }
