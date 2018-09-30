@@ -81,4 +81,32 @@ body {
     margin-top: -.78rem;
     transform: rotate(10deg); }
 
+.desk {
+  background: #C4AA82;
+  height: 1rem;
+  width: 15rem;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border: 0.09rem solid #0B303D;
+  box-shadow: inset 0 -5px 0 rgba(102, 102, 102, 0.3);
+  margin-top: 11.5rem;
+  margin-left: 2rem; }
+  .desk:before, .desk:after {
+    content: '';
+    position: absolute;
+    background: #C4AA82;
+    border: 0.09rem solid #0B303D; }
+  .desk:before {
+    height: 10rem;
+    width: .8rem;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1.1rem;
+    margin-left: .7rem; }
+  .desk:after {
+    width: 7rem;
+    height: 10rem;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1.1rem;
+    margin-left: 7.4rem; }
+
 /*# sourceMappingURL=style.css.map */

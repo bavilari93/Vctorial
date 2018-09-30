@@ -118,3 +118,41 @@ body {
 
     }
 }
+.desk{
+	background: $shelf; 
+	height:1rem;
+	width: 15rem;
+	@include radius(12px);
+	@include border(0.09rem);
+	box-shadow: inset 0 -5px 0 rgba(#666666, 0.3);
+	margin:{
+		top:11.5rem;
+		left: 2rem;
+	}
+	&:before,&:after{
+		content:'';
+		position:absolute; 
+		background: $shelf; 
+		@include border(0.09rem);
+	}
+	&:before{
+		height: 10rem; 
+		width: .8rem;
+		border-radius: 0 0 5px 5px; 
+		margin:{
+			top: 1.1rem;
+			left:.7rem;
+		}
+
+	}
+		&:after{
+		width:7rem;
+		height: 10rem;
+		border-radius: 0 0 5px 5px; 
+		margin:{
+			top: 1.1rem;
+			left:7.4rem;
+		}
+
+	}
+}
